@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <!-- bootsrtrap  -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesom -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Evolo</title>
+  </head>
+  <body>
+    <!-- Login Form Start -->
+    <div class="login-main-wrapper-one">
+      <img
+        src="./assets/images/Mask Group 4.png"
+        alt="side-image"
+        width="100%"
+        height="270px"
+      />
+    </div>
+    <div class="login-page d-flex align-items-center">
+      <div
+        class="
+          login-container
+          d-flex
+          flex-column 
+          flex-sm-row
+          container-fluid
+          col-12 col-md-10
+          p-0
+        "
+      >
+        <!-- Login Page Image Side -->
+        <div
+          class="
+            login-left-side
+            col-12 col-md-6
+            p-0
+            d-flex
+            flex-direction-col
+            justify-content-center
+          "
+        >
+          <div>
+            <img
+              class="logo-img"
+              src="./assets/images/evolo logo.png"
+              alt="logo"
+              height="40px"
+            />
+          </div>
+          <div
+            class="
+              bg-main-form
+              d-flex
+              justify-content-center
+              align-items-center
+            "
+          >
+            <img
+              class="login-main-cover-img"
+              src="./assets/images/Group 16927.png"
+              height="200px"
+              alt="login-background"
+            />
+          </div>
+        </div>
+        <!-- Login Form Image Side End -->
+
+        <!-- Login page form side -->
+        <div class="login-form-main login-form-right-side col-12 col-md-6 py-5">
+          <div class="d-flex justify-content-end">
+            <span class="cross-icon">
+              <i class="fa fa-times"></i>
+            </span>
+          </div>
+          <div class="login-form-inner col-12 col-md-7">
+            <h3 class="login-heading">Login</h3>
+            <p class="login-description">
+              Please Enter Your Details To Get Started Evolo. Don't Worry Your
+              Details Are Safe
+            </p>
+            <form>
+              <div class="form-group">
+                <label for="userName" class="login-form-label">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter User Name"
+                  required="true"
+                />
+              </div>
+              <div class="form-group">
+                <label for="InputPassword " class="login-form-label"
+                  >Password</label
+                >
+                <div
+                  class="input-group position-relative"
+                  id="show_hide_password"
+                >
+                  <input class="form-control" type="password" required="true" placeholder="Password" />
+                  <div class="passwordShow-Hide">
+                    <a><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="
+                  remeber-password-main
+                  d-flex
+                  align-items-center
+                  justify-content-between
+                "
+              >
+                <div class="form-group form-check">
+                  <input type="radio" class="form-check-input" />
+                  <label class="form-check-label login-form-label"
+                    >Remember Us?</label
+                  >
+                </div>
+                <div>
+                  <p class="login-form-label pointer">Forget Password?</p>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary login-submit-button">
+                SUBMIT
+              </button>
+              <p class="login-form-label text-center pt-3">
+                I Don't Have An Account? <a href="http://127.0.0.1:5500/registration.html" ><span class="text-primary pointer">
+                  Registration</span
+                ></a>
+              </p>
+            </form>
+          </div>
+        </div>
+        <!-- Login page form side End -->
+      </div>
+    </div>
+    <div class="position-relative">
+      <div class="login-main-wrapper-two">
+        <img
+          src="./assets//images/Mask Group 5.png"
+          alt="side-image"
+          width="100%"
+          height="280px"
+        />
+      </div>
+    </div>
+    <!-- Login Form End -->
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("#show_hide_password a").on("click", function (event) {
+        event.preventDefault();
+        if ($("#show_hide_password input").attr("type") == "text") {
+          $("#show_hide_password input").attr("type", "password");
+            $("#show_hide_password i").addClass("fa-eye-slash");
+            $("#show_hide_password i").removeClass("fa-eye");
+        } else if ($("#show_hide_password input").attr("type") == "password") {
+          $("#show_hide_password input").attr("type", "text");
+            $("#show_hide_password i").removeClass("fa-eye-slash");
+          $("#show_hide_password i").addClass("fa-eye");
+        }
+      });
+    });
+  </script>
+</html>
